@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+//This is the web application started building in 18-4-2024
+//a travel planner web app using react 
+//components
+//1.header
+//2.for,
+//3.list
+//4.footer
+//sorting
+
+
 import './App.css';
+import Header from './Header'
+import Footer from './Footer'
+import List from './List'
+import Form from './Form'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <Form />
+      <List
+      
+      />
+      <Footer />
+     
     </div>
   );
 }

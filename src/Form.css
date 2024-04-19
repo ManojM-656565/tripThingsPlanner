@@ -1,0 +1,23 @@
+.form{
+    text-align: center;
+    align-items: center;
+    display: inline;
+    background-color: aquamarine;
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button,
+select,
+input {
+  background-color: #fdbb06;
+  color: #e5620b;
+  font-family: inherit;
+  border: black;
+  border-radius: 5rem;
+  padding: 1.2rem 3.2rem;
+  font-weight: 700;
+  font-size: 1.8rem;
+  cursor: pointer;
+}

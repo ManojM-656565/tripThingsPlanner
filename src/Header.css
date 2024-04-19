@@ -1,0 +1,17 @@
+.header{
+    /*height: 50%;*/
+
+    background-image: linear-gradient(to right, #7ed56f, #28b485);
+
+        text-align: center;
+        /*background-color: #f4a226;*/
+        font-family: "Monoton";
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        word-spacing: 30px;
+        letter-spacing: -5px;
+        padding: 1.5rem 0;
+      
+    /*padding: 25%;*/
+}
