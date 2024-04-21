@@ -83,9 +83,7 @@ const Item = ({items,onToogle}) => {
     </li>
   )
 }
-//
-git branch -M main
-git push -u origin main
+
 
 
 export default List
