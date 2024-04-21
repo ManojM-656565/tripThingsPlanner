@@ -9,6 +9,7 @@
 
 
 import './App.css';
+import { useState } from 'react';
 import Header from './Header'
 import Footer from './Footer'
 import List from './List'
@@ -16,11 +17,31 @@ import Form from './Form'
 
 
 function App() {
+  const [allitem,setAllitem]=useState([]);
+
+  function handleAddItems(newItems){
+    setAllitem(allitem=>(
+      [...allitem,newItems]
+  
+    ))
+
+    }
+    function handleToogle(id){
+      setAllitem((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, isPacked: !item.isPacked } : item
+      )
+    );
+  }
+
   return (
     <div className="app">
       <Header />
-      <Form />
+      <Form 
+      onAddItems={handleAddItems}/>
       <List
+      items={allitem}
+      onToogle={handleToogle}
       
       />
       <Footer />

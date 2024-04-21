@@ -1,29 +1,63 @@
 import React from 'react';
 
 import './List.css';
-const data=[
+// const data=[
   
-  { 
-    id: 1,
-    description: "Passports", 
-    quantity: 2, 
-    packed: false },
-  { id: 2,
-    description: "Socks",
-    quantity: 12, 
-    packed: false
-   },
+//   { 
+//     id: 1,
+//     description: "Passports", 
+//     quantity: 2, 
+//     packed: false },
+//   { id: 2,
+//     description: "Socks",
+//     quantity: 12, 
+//     packed: false
+//    },
+//   { 
+//     id: 1,
+//     description: "Passports", 
+//     quantity: 2, 
+//     packed: false },
+//   { id: 2,
+//     description: "Socks",
+//     quantity: 12, 
+//     packed: false
+//    },
+//   { 
+//     id: 1,
+//     description: "Passports", 
+//     quantity: 2, 
+//     packed: false },
+//   { id: 2,
+//     description: "Socks",
+//     quantity: 12, 
+//     packed: false
+//    },
+//   { 
+//     id: 1,
+//     description: "Passports", 
+//     quantity: 2, 
+//     packed: false },
+//   { id: 2,
+//     description: "Socks",
+//     quantity: 12, 
+//     packed: false
+//    },
 
-];
+// ];
 
 
 
-const List = () => {
+const List = ({items,onToogle}) => {
+
+  
   return (
     <ul className="list">
       {
-       data.map((data)=>
-      <Item data={data}/>
+       items.map((items)=>
+      <Item items={items}
+      onToogle={onToogle}
+      />
       )
       }
 
@@ -32,15 +66,26 @@ const List = () => {
 }
 
 
-const Item = ({data}) => {
+const Item = ({items,onToogle}) => {
+
+
   return (
     <li className="">
-      <input type='checkbox'></input>
-         <p>{data.description}</p>
+      <input 
+      type='checkbox'
+      value={items.isPacked}
+      onChange={onToogle(items.id)}
+
+      /> 
+         <span style= {items.isPacked ?{textDecoration:"line-through"}:{}}>{items.items}{items.des}</span>
+         <button>❌</button>
 
     </li>
   )
 }
+//
+git branch -M main
+git push -u origin main
 
 
 export default List
